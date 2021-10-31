@@ -6,7 +6,7 @@ import Profile from '../profile'
 const All = () => {
     return (
 
-        <div className=" border-l-2 border-b-2 border-r-2 hover:bg-gray-100 cursor-pointer">
+        <div className=" border-b-2  hover:bg-gray-100 cursor-pointer">
             <div className="flex flex-row items-center px-8 space-x-2">
                 <div className="mt-4">
                     <ProfileImageIcon className="w-9 h-9 text-primary-dark" />
