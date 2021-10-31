@@ -47,14 +47,10 @@ export const menus = [
     }
 ]
 const Sidebar = () => {
-    const [active, setActive] = useState("Home");
-    const { selectSidebar, selectedSidebar } = useContext(SidebarContext)
+
+    const { selectSidebar, active, handleMenuClick } = useContext(SidebarContext)
 
 
-    const handleMenuClick = (name) => {
-        selectSidebar(name)
-        setActive(name);
-    }
 
 
     return (

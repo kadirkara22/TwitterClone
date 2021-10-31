@@ -45,6 +45,14 @@ export const menus = [
 
 export const SidebarContext = React.createContext();
 const SidebarContextProvider = (props) => {
+    const [active, setActive] = useState("Home");
+
+
+
+    const handleMenuClick = (name) => {
+        selectSidebar(name)
+        setActive(name);
+    }
 
     const [selectedSidebar, setSelectedSidebar] = useState("/")
 
@@ -55,7 +63,7 @@ const SidebarContextProvider = (props) => {
     }
 
     return (
-        <SidebarContext.Provider value={{ selectedSidebar, selectSidebar }}>
+        <SidebarContext.Provider value={{ selectedSidebar, selectSidebar, handleMenuClick, active }}>
             {props.children}
         </SidebarContext.Provider>
     )

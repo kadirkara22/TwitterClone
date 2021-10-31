@@ -1,11 +1,7 @@
 import React from 'react'
 import { ProfileImageIcon } from '../../../icons/icon'
 import Profile from '../profile'
-export const trendy = [
-    {
-        avatar: "https://www.teknozum.com/wp-content/uploads/2019/12/whatsapp-profil-foto%C4%9Fraflar%C4%B1-49-1024x842.jpg"
-    }
-]
+
 
 const All = () => {
     return (
@@ -16,7 +12,7 @@ const All = () => {
                     <ProfileImageIcon className="w-9 h-9 text-primary-dark" />
                 </div>
                 <div className="mt-4">
-                    <img src={trendy.avatar}
+                    <img src="https://www.teknozum.com/wp-content/uploads/2019/12/whatsapp-profil-foto%C4%9Fraflar%C4%B1-49-1024x842.jpg"
                         alt="Profile"
                         className="w-9 h-9 rounded-full"
                     ></img>

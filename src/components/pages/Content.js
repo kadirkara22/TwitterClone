@@ -13,11 +13,11 @@ import Profile from './profile';
 
 const Content = () => {
 
-    const { selectedSidebar } = useContext(SidebarContext);
+    const { selectedSidebar, active } = useContext(SidebarContext);
 
     return (
         <div className="flex-1 mr-8">
-            {selectedSidebar.path === "/" && <Feed />}
+
             {selectedSidebar.path === "/explore" && <Explore />}
             {selectedSidebar.path === "/notifications" && <Notifications />}
             {selectedSidebar.path === "/messages" && <Messages />}
@@ -25,7 +25,7 @@ const Content = () => {
             {selectedSidebar.path === "/lists" && <Lists />}
             {selectedSidebar.path === "/profile" && <Profile />}
             {selectedSidebar.path === "/more" && <More />}
-
+            <Feed />
         </div>
     )
 }
