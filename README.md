@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # TwitterClone
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/19f85b27-d86b-47ae-8134-ba9bf967f533/deploy-status)](https://app.netlify.com/sites/twitterclonebootcamp/deploys)
+https://twitterclonebootcamp.netlify.app/
 
 ## Available Scripts
 
