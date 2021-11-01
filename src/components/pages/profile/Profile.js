@@ -1,5 +1,8 @@
 import React from 'react'
 import { ListArrowIcon } from '../../../icons/icon'
+import ProfileContent from './ProfileContent'
+import ProfileInfo from './ProfileInfo'
+import ProfileNav from './ProfileNav'
 
 const Profile = () => {
     return (
@@ -17,6 +20,9 @@ const Profile = () => {
 
                 </div>
             </div>
+            <ProfileInfo />
+            <ProfileNav />
+            <ProfileContent />
         </div>
     )
 }
