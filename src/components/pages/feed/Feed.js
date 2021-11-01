@@ -52,7 +52,7 @@ const Feed = () => {
 
             <div className="flex flex-row items-center border-b-2 h-36">
                 <div className="h-full pl-4 pt-3">
-                    <img src={users[0].avatar}
+                    <img src="https://pbs.twimg.com/profile_images/654717275413413892/suoRxAIA_400x400.jpg"
                         alt="Profile"
                         className="w-12 h-12 rounded-full"
                     ></img></div>
