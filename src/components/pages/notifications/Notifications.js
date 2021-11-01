@@ -5,8 +5,8 @@ import All from './All'
 const Notifications = () => {
     return (
         <div className="min-h-screen border-r-2 border-l-2">
-            < div className="cursor-pointer" >
-                <div className="bg-white sticky top-0 flex flex-row items-center justify-between">
+            < div className="cursor-pointer bg-white sticky top-0" >
+                <div className=" flex flex-row items-center justify-between">
                     <span className="font-bold text-xl m-4">Notifications</span>
                     <div className="flex items-center justify-center w-10 h-10 mr-2 cursor-pointer hover:bg-gray-200 rounded-full">
                         <SettingsIcon className="w-6 h-6 " />

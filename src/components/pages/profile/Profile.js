@@ -7,7 +7,7 @@ import ProfileNav from './ProfileNav'
 const Profile = () => {
     return (
         <div className="w-full h-screen border-l-2 border-r-2">
-            <div className="flex flex-row items-center border-b-2">
+            <div className="flex flex-row items-center border-b-2 bg-white sticky top-0">
                 <div className="flex items-center justify-center w-10 h-10 mr-2 ml-2 rounded-full hover:bg-gray-200">
                     <ListArrowIcon className="w-5 h-5" />
                 </div>

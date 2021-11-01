@@ -9,7 +9,7 @@ const Theme = {
 const More = () => {
     const { selectedTheme, changeTheme } = useContext(ThemeContext)
     return (
-        <div className="flex flex-row items-center justify-evenly h-20 w- 20 border-l-2 border-r-2 h-screen">
+        <div className="flex flex-row items-center justify-evenly bg-white sticky top-0 h-20 w- 20 border-l-2 border-r-2 h-screen">
 
             {
                 ["lightsOut", "dim", "default"].map((theme) => (

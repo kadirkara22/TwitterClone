@@ -9,7 +9,7 @@ const BookMarks = () => {
 
     return (
         <div className="w-full h-screen border-l-2 border-r-2">
-            <div className="flex flex-row items-center justify-between border-b-2 cursor-pointer">
+            <div className="flex flex-row items-center justify-between border-b-2 cursor-pointer bg-white sticky top-0">
                 <div className="pl-4 py-2">
                     <div className="font-bold text-xl">BookMarks</div>
                     <div className="text-gray-600 text-sm">@kadirkara22</div>
