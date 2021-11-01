@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { PopularIcon } from '../../../icons/icon'
 import UserTweet from './UserTweet';
 import { EmojiIcon, GIFIcon, ImageIcon, PlanIcon, PollIcon } from '../../../icons/icon'
 import Tweet from './Tweet';
 import db from '../../../firebase';
+import { UserContext } from '../../../context/UserContext';
+import { TweetContext } from '../../../context/TweetContext';
 
 
 
@@ -31,41 +33,9 @@ export const reacticon = [
     },
 ]
 const Feed = () => {
-    const [posts, setPost] = useState([]);
-    const [tweetMessage, setTweetMessage] = useState("");
-    const [tweetImage, setTweetImage] = useState("");
-    const [tweetReply, TweetReply] = useState("");
-    const [tweetRetweet, setTweetRetweet] = useState("");
-    const [tweetLike, setTweetLike] = useState("");
-    const [tweetShare, setTweetShare] = useState("");
 
-
-    const sendTweet = (e => {
-        e.preventDefault();
-        db.collection('posts').add({
-            displayName: "kadirkara22",
-            username: " Kadir Kara",
-            verified: true,
-            text: tweetMessage,
-            avatar: "https://pbs.twimg.com/profile_images/654717275413413892/suoRxAIA_400x400.jpg",
-            image: tweetImage,
-            reply: tweetReply,
-            retweet: tweetRetweet,
-            like: tweetLike,
-            share: tweetShare,
-
-        });
-        setTweetMessage("");
-    })
-
-    useEffect(() => {
-        db.collection('posts').onSnapshot(
-            snapshot => (
-                setPost(snapshot.docs.map(doc => doc.data()))
-            )
-        )
-    }, [])
-
+    const { users } = useContext(UserContext);
+    const { sendTweet, posts, tweetMessage, setTweetMessage } = useContext(TweetContext)
 
     return (
 
@@ -82,7 +52,7 @@ const Feed = () => {
 
             <div className="flex flex-row items-center border-b-2 h-36">
                 <div className="h-full pl-4 pt-3">
-                    <img src="https://pbs.twimg.com/profile_images/654717275413413892/suoRxAIA_400x400.jpg"
+                    <img src={users[0].avatar}
                         alt="Profile"
                         className="w-12 h-12 rounded-full"
                     ></img></div>

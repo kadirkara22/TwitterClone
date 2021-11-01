@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { UserContext } from '../../../context/UserContext';
 import { InfoIcon, ListArrowIcon, NewListIcon, SettingsIcon } from '../../../icons/icon'
 
 const Lists = () => {
+    const { users } = useContext(UserContext);
     return (
         <div className="w-full h-screen border-l-2 border-r-2">
             <div className="flex flex-row items-center border-b-2 bg-white sticky top-0">
@@ -12,7 +14,7 @@ const Lists = () => {
 
                     <div className="pl-4 py-2 w-96">
                         <div className="font-bold text-xl">Lists</div>
-                        <div className="text-gray-600 text-sm">@kadirkara22</div>
+                        <div className="text-gray-600 text-sm">@{users[0].displayName}</div>
                     </div>
                     <div className="flex items-center justify-center w-10 h-10 ml-10 rounded-full hover:bg-gray-200">
                         <NewListIcon className="w-5 h-5" />
